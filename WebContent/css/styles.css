@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Dancing+Script:wght@500&display=swap');
+
+/* ******************************** CONFIG DE BASE CSS ************************************ */
+* {
+    color: #DAA520;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none; /* Va par exemple enlever le soulignement */
+    color: black; /* Texte en noir pour lien */
+}
+
+h1{
+    font-size: 6em;
+    padding-top: 100px;
+    margin : 0;
+    text-shadow: 1px 3px 2px antiquewhite;
+}
+
+h2{
+    font-size: 3em;
+    margin-left: 5%;
+}
+
+h1, h2{
+	text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+p{
+    margin: 20px 5%;
+    font-size: 1.2em;
+}
+
+::placeholder{
+    font-size: 1.3em;
+    padding-left: 25px;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+/* ******************************** HEADER ************************************ */
+header{
+	text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.lineTitre{
+    height: 1px;
+    width: 25%;
+    margin: 30px auto;
+    background-color: #FFFAE1;
+    box-shadow: 1px 3px 2px black;
+}
+
+/* ******************************** MAIN ************************************ */
+.presentation, .principal{
+	text-align: center;
+}
+
+.requis{
+	color: red;
+}
+
+.erreur{
+	text-align: center;
+	color: red;
+}
+
+.erreurNav{
+	text-align: right;
+	color: red;
+	margin-right: 10%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/* ******************************** BOUTON PERSONNALISE ************************************ */
+.btn a{
+    border-radius: 8px;
+    border: 1px solid antiquewhite;
+    text-align: center;
+    width: 100px;
+    background-color: #DAA520;   
+    display: block;
+    animation: shadow-pop-br 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+.btn a:active{ /* Lors du clique */
+    animation: shadow-back 0.1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+.btn a:hover{
+    background-color: #e55039;
+    color: #FFFAE1;
+    cursor: pointer; /* Pour signifier que le bouton est cliquable */
+    /*transition: 0.3s ease-in-out; /* Petit effet de transition */
+}
+
+/* ******************************** FOOTER ************************************ */
+
+#ligneSecondaire{
+    height: 1px;
+    width: 75%;
+    background-color: #FFFAE1;
+    margin: 40px auto;
+}
+
+.ligneSeparation{
+    height: 5px;
+    width: 75%;
+    background-color: #000;
+    margin: 30px auto;
+}
+
+/* ******************************** ANIMATION ************************************ */
+@keyframes shadow-pop-br {
+    0% {
+      box-shadow: 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb;
+      transform: translateX(0) translateY(0); /* Effet de pression */
+    }
+    100% {
+      box-shadow: 1px 1px #bbb, 2px 2px #bbb, 3px 3px #bbb, 4px 4px #bbb, 5px 5px #bbb, 6px 6px #bbb, 7px 7px #bbb, 8px 8px #bbb;
+      transform: translateX(-8px) translateY(-8px);
+    }
+}
+
+@keyframes shadow-back {
+    0% {
+      box-shadow: 1px 1px #bbb, 2px 2px #bbb, 3px 3px #bbb, 4px 4px #bbb, 5px 5px #bbb, 6px 6px #bbb, 7px 7px #bbb, 8px 8px #bbb;
+      transform: translateX(-8px) translateY(-8px);
+    }
+    100% {
+      box-shadow: 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb, 0 0 #bbb;
+      transform: translateX(0) translateY(0);
+    }
+}
